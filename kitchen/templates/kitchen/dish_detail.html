@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ dish.name }}</title>
+</head>
+<body>
+    <h1>{{ dish.name }}</h1>
+    <p><strong>Тип страви:</strong> {{ dish.dish_type.name }}</p>
+    <p><strong>Опис:</strong> {{ dish.description }}</p>
+    <p><strong>Ціна:</strong> {{ dish.price }} грн</p>
+    <p><strong>Кухарі:</strong>
+        {% for cook in dish.cooks.all %}
+            {{ cook.first_name }} {{ cook.last_name }}{% if not forloop.last %}, {% endif %}
+        {% empty %}
+            Немає призначених кухарів
+        {% endfor %}
+    </p>
+    <p><a href="{% url 'dish_list' %}">← Назад до списку страв</a></p>
+</body>
+</html>
