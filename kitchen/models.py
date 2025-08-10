@@ -13,12 +13,21 @@ class DishType(models.Model):
         return self.name
 
 
+class Ingredient(models.Model):
+    name = models.CharField(max_length=225, unique=True)
+    description = models.TextField()
+
+    def __str__(self):
+        return self.name
+
+
 class Dish(models.Model):
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=225)
     description = models.TextField()
     price = models.DecimalField(max_digits=8, decimal_places=2)
     dish_type = models.ForeignKey(DishType, on_delete=models.CASCADE)
-    cooks = models.ManyToManyField('Cook', blank=True)
+    cooks = models.ManyToManyField("Cook", blank=True)
+    ingredients = models.ManyToManyField(Ingredient, blank=True)
 
     class Meta:
         verbose_name = "Страва"
