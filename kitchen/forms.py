@@ -36,5 +36,5 @@ class DishForm(forms.ModelForm):
         widgets = {
             "description": forms.Textarea(attrs={"rows": 3}),
             "cooks": forms.CheckboxSelectMultiple(),
-            "ingredients": forms.CheckboxSelectMultiple(),
+            "ingredients": forms.SelectMultiple(attrs={"class": "form-control"})
         }
