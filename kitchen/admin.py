@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
-from .models import Cook, DishType, Dish
+from .models import Cook, DishType, Dish, Ingredient
 from .forms import CookCreationForm, CookChangeForm
 
 
@@ -28,3 +28,4 @@ class CookAdmin(UserAdmin):
 
 admin.site.register(DishType)
 admin.site.register(Dish)
+admin.site.register(Ingredient)
