@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <title>Додати страву</title>
 </head>
 <body>
-$END$
+    <h1>Додати страву</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Зберегти</button>
+    </form>
+    <p><a href="{% url 'dish_list' %}">← Назад до списку страв</a></p>
 </body>
 </html>

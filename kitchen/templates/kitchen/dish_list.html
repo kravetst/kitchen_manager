@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'kitchen/css/style.css' %}">
     <title>Список страв</title>
 </head>
 <body>
     <h1>Список страв</h1>
+
+    <p>
+        <a href="{% url 'dish_create' %}" style="padding: 8px 12px; background: #4CAF50; color: white; text-decoration: none; border-radius: 4px;">
+            ➕ Додати страву
+        </a>
+    </p>
+
     <ul>
     {% for dish in dishes %}
         <li><a href="{% url 'dish_detail' dish.pk %}">{{ dish.name }}</a> — {{ dish.price }} грн</li>

@@ -12,9 +12,17 @@
         {% for cook in dish.cooks.all %}
             {{ cook.first_name }} {{ cook.last_name }}{% if not forloop.last %}, {% endif %}
         {% empty %}
-            Немає призначених кухарів
+            Немає кухарів
         {% endfor %}
     </p>
-    <p><a href="{% url 'dish_list' %}">← Назад до списку страв</a></p>
+    <p><strong>Інгредієнти:</strong>
+        {% for ingredient in dish.ingredients.all %}
+            {{ ingredient.name }}{% if not forloop.last %}, {% endif %}
+        {% empty %}
+            Немає інгредієнтів
+        {% endfor %}
+    </p>
+
+    <a href="{% url 'dish_list' %}">← Назад до списку страв</a>
 </body>
 </html>
