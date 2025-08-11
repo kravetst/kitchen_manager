@@ -6,8 +6,8 @@ class DishType(models.Model):
     name = models.CharField(max_length=100)
 
     class Meta:
-        verbose_name = "Тип страви"
-        verbose_name_plural = "Типи страв"
+        verbose_name = "Dish Type"
+        verbose_name_plural = "Dish Types"
 
     def __str__(self):
         return self.name
@@ -15,7 +15,7 @@ class DishType(models.Model):
 
 class Ingredient(models.Model):
     name = models.CharField(max_length=225, unique=True)
-    description = models.TextField()
+    description = models.TextField(blank=True, null=True)
 
     def __str__(self):
         return self.name
@@ -30,8 +30,8 @@ class Dish(models.Model):
     ingredients = models.ManyToManyField(Ingredient, blank=True)
 
     class Meta:
-        verbose_name = "Страва"
-        verbose_name_plural = "Страви"
+        verbose_name = "Dish"
+        verbose_name_plural = "Dishes"
 
     def __str__(self):
         return self.name
@@ -41,8 +41,8 @@ class Cook(AbstractUser):
     years_of_experience = models.CharField(max_length=10)
 
     class Meta:
-        verbose_name = "Кухар"
-        verbose_name_plural = "Кухарі"
+        verbose_name = "Cook"
+        verbose_name_plural = "Cooks"
 
     def __str__(self):
         return self.get_full_name() or self.username
