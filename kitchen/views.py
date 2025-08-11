@@ -4,13 +4,15 @@ from kitchen.models import Dish
 
 
 def dish_list(request):
-    dishes = Dish.objects.all()
+    dishes = Dish.objects.all().prefetch_related(
+        "ingredients",
+        "cooks",
+        "dish_type"
+    )
     return render(
         request,
         "kitchen/dish_list.html",
-        {
-            "dishes": dishes,
-        },
+        {"dishes": dishes}
     )
 
 

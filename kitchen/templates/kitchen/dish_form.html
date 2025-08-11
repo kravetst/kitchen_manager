@@ -1,27 +1,31 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Додати страву</title>
+    <meta charset="UTF-8">
+    <title>Add Dish</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-rc.0/css/select2.min.css" rel="stylesheet"/>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-rc.0/js/select2.min.js"></script>
 </head>
 <body>
-    <h1>Додати страву</h1>
+    <h1>Add Dish</h1>
+
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit">Зберегти</button>
+        <button type="submit">Save</button>
     </form>
-    <p><a href="{% url 'dish_list' %}">← Назад до списку страв</a></p>
+
+    <p><a href="{% url 'dish_list' %}">← Back to dish list</a></p>
 
     <script>
         $(document).ready(function() {
             $('#id_ingredients').select2({
-                placeholder: "Виберіть інгредієнти",
-                allowClear: true
+                placeholder: "Select ingredients",
+                allowClear: true,
+                width: '100%'
             });
         });
     </script>

@@ -1,6 +1,6 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm
-from .models import Cook, Dish, DishType
+from .models import Cook, Dish
 
 
 class CookCreationForm(UserCreationForm):
@@ -11,12 +11,12 @@ class CookCreationForm(UserCreationForm):
             "first_name",
             "last_name",
             "email",
-            "years_of_experience"
+            "years_of_experience",
         )
 
 
 class CookChangeForm(UserChangeForm):
-    password = None  # прибираємо поле пароля
+    password = None  # Remove password field
 
     class Meta:
         model = Cook
@@ -25,7 +25,7 @@ class CookChangeForm(UserChangeForm):
             "first_name",
             "last_name",
             "email",
-            "years_of_experience"
+            "years_of_experience",
         )
 
 
@@ -36,5 +36,10 @@ class DishForm(forms.ModelForm):
         widgets = {
             "description": forms.Textarea(attrs={"rows": 3}),
             "cooks": forms.CheckboxSelectMultiple(),
-            "ingredients": forms.SelectMultiple(attrs={"class": "form-control"})
+            "ingredients": forms.SelectMultiple(
+                attrs={
+                    "id": "id_ingredients",
+                    "class": "form-control",
+                }
+            ),
         }
