@@ -2,6 +2,17 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser
 
 
+class Cuisine(models.Model):
+    name = models.CharField(max_length=100, unique=True)
+
+    class Meta:
+        verbose_name = "Cuisine"
+        verbose_name_plural = "Cuisines"
+
+    def __str__(self):
+        return self.name
+
+
 class DishType(models.Model):
     name = models.CharField(max_length=100)
 
@@ -28,6 +39,10 @@ class Dish(models.Model):
     dish_type = models.ForeignKey(DishType, on_delete=models.CASCADE)
     cooks = models.ManyToManyField("Cook", blank=True)
     ingredients = models.ManyToManyField(Ingredient, blank=True)
+    cuisine = models.ForeignKey(
+        Cuisine, on_delete=models.CASCADE,
+        null=True, blank=True
+    )
 
     class Meta:
         verbose_name = "Dish"

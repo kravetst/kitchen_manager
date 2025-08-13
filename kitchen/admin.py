@@ -26,6 +26,30 @@ class CookAdmin(UserAdmin):
     )
 
 
-admin.site.register(DishType)
-admin.site.register(Dish)
-admin.site.register(Ingredient)
+@admin.register(DishType)
+class DishTypeAdmin(admin.ModelAdmin):
+    list_display = ("name",)
+    search_fields = ("name",)
+
+
+@admin.register(Ingredient)
+class IngredientAdmin(admin.ModelAdmin):
+    list_display = ("name", "description")
+    search_fields = ("name",)
+
+
+@admin.register(Dish)
+class DishAdmin(admin.ModelAdmin):
+    list_display = ("name", "dish_type", "price", "get_cooks", "get_ingredients")
+    search_fields = ("name", "dish_type__name")
+    list_filter = ("dish_type",)
+
+    def get_cooks(self, obj):
+        return ", ".join([f"{cook.get_full_name() or cook.username}" for cook in obj.cooks.all()])
+
+    get_cooks.short_description = "Cooks"
+
+    def get_ingredients(self, obj):
+        return ", ".join([ingredient.name for ingredient in obj.ingredients.all()])
+
+    get_ingredients.short_description = "Ingredients"
