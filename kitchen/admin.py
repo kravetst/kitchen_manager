@@ -40,18 +40,17 @@ class IngredientAdmin(admin.ModelAdmin):
 
 @admin.register(Dish)
 class DishAdmin(admin.ModelAdmin):
-    list_display = ("name", "dish_type", "price", "get_cooks", "get_ingredients")
+    list_display = ("name", "dish_type", "price", "get_cooks", "get_ingredients", "image_url")
     search_fields = ("name", "dish_type__name")
     list_filter = ("dish_type",)
+    fields = ("name", "description", "price", "dish_type", "cuisine", "cooks", "ingredients", "image_url")
 
     def get_cooks(self, obj):
         return ", ".join([f"{cook.get_full_name() or cook.username}" for cook in obj.cooks.all()])
-
     get_cooks.short_description = "Cooks"
 
     def get_ingredients(self, obj):
         return ", ".join([ingredient.name for ingredient in obj.ingredients.all()])
-
     get_ingredients.short_description = "Ingredients"
 
 

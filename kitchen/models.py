@@ -4,6 +4,7 @@ from django.contrib.auth.models import AbstractUser
 
 class Cuisine(models.Model):
     name = models.CharField(max_length=100, unique=True)
+    image_url = models.URLField(max_length=500, blank=True)
 
     class Meta:
         verbose_name = "Cuisine"
