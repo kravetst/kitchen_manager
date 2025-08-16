@@ -56,6 +56,7 @@ class Dish(models.Model):
 
 class Cook(AbstractUser):
     years_of_experience = models.CharField(max_length=10)
+    image_url = models.URLField(max_length=500, blank=True)
 
     class Meta:
         verbose_name = "Cook"
