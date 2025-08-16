@@ -52,3 +52,26 @@ body, html {
 .btn:hover {
     background: darkorange;
 }
+
+.cooks-section {
+    margin-top: 40px;
+}
+
+.cook-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 3px solid #fff;
+}
+
+.cook-card h5 {
+    margin: 5px 0 2px 0;
+    font-size: 1.1rem;
+}
+
+.cook-card p {
+    font-size: 0.9rem;
+    color: #f0f0f0;
+}

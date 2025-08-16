@@ -10,9 +10,11 @@
       {% for cuisine in cuisines %}
       <div class="col-md-4 mb-4">
           <div class="card h-100">
-              <img src="{% static 'img/image-of-cuisine-names/'|add:cuisine.name|add:'.jpg' %}"
-                   class="card-img-top" alt="{{ cuisine.name }}"
-                   onerror="this.src='{% static 'img/curved-images/main-menu.jpg' %}'">
+              {% if cuisine.image_url %}
+                  <img src="{{ cuisine.image_url }}" class="card-img-top" alt="{{ cuisine.name }}">
+              {% else %}
+                  <img src="{% static 'img/curved-images/main-menu.jpg' %}" class="card-img-top" alt="{{ cuisine.name }}">
+              {% endif %}
               <div class="card-body text-center">
                   <h5 class="card-title">{{ cuisine.name }}</h5>
                   <a href="{% url 'kitchen:cuisine_detail' cuisine.pk %}" class="btn btn-primary mt-2">View Dishes</a>
