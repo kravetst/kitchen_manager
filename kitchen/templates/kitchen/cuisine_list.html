@@ -1,10 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Cuisines{% endblock %}
+
+{% block content %}
+<div class="container content-container">
+  <h2 class="text-center mb-4">All Cuisines</h2>
+  <div class="row">
+      {% for cuisine in cuisines %}
+      <div class="col-md-4 mb-4">
+          <div class="card h-100">
+              <img src="{% static 'img/image-of-cuisine-names/'|add:cuisine.name|add:'.jpg' %}"
+                   class="card-img-top" alt="{{ cuisine.name }}"
+                   onerror="this.src='{% static 'img/curved-images/main-menu.jpg' %}'">
+              <div class="card-body text-center">
+                  <h5 class="card-title">{{ cuisine.name }}</h5>
+                  <a href="{% url 'kitchen:cuisine_detail' cuisine.pk %}" class="btn btn-primary mt-2">View Dishes</a>
+              </div>
+          </div>
+      </div>
+      {% empty %}
+          <p class="text-center">No cuisines to display.</p>
+      {% endfor %}
+  </div>
+</div>
+{% endblock %}

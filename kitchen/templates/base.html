@@ -1,16 +1,50 @@
 {% load static %}
 
-<nav class="navbar navbar-expand-lg">
-  <div class="container">
-    <a class="navbar-brand" href="{% url 'kitchen:index' %}">My Kitchen</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}My Kitchen{% endblock %}</title>
 
-    <ul class="navbar-nav ms-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'kitchen:dish_list' %}">Dishes</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'kitchen:cuisine_list' %}">Cuisines</a>
-      </li>
-    </ul>
+    <!-- Basic styles -->
+    <link rel="stylesheet" href="{% static 'css/soft-design-system.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nucleo-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nucleo-svg.css' %}">
+
+    <!-- Твій стиль -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="{% url 'kitchen:dish_list' %}">My Kitchen</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'kitchen:dish_list' %}">Dishes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'kitchen:cuisine_list' %}">Cuisines</a>
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>
+
+<!-- Instead of a simple container, we add a block with a background -->
+<div class="main-background">
+    <div class="container content-container mt-4">
+        {% block content %}{% endblock %}
+    </div>
+</div>
+
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/choices.min.js' %}"></script>
+</body>
+</html>

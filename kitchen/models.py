@@ -43,6 +43,7 @@ class Dish(models.Model):
         Cuisine, on_delete=models.CASCADE,
         null=True, blank=True
     )
+    image_url = models.URLField(max_length=500, blank=True)
 
     class Meta:
         verbose_name = "Dish"

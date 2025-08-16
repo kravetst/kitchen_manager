@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Kitchen</title>
+    <link rel="stylesheet" href="{% static 'css/my_kitchen.css' %}">
+</head>
+<body>
+    <div class="background-image">
+        <div class="overlay">
+            <h1 class="title">Welcome to My Kitchen</h1>
+            <p class="subtitle">Discover our chefs and their delicious dishes</p>
+
+            <div class="content-box">
+                <h2>Our Chefs</h2>
+                <p>Meet the talented people who create our menu.</p>
+                <a href="{% url 'kitchen:cuisine-list' %}" class="btn">Explore Cuisines</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

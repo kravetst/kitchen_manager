@@ -1,33 +1,60 @@
-{% load static %}
+{% extends "base.html" %}
+{% load static kitchen_extras %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Add Dish</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-rc.0/css/select2.min.css" rel="stylesheet"/>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-rc.0/js/select2.min.js"></script>
-</head>
-<body>
-    <h1>Add Dish</h1>
+{% block title %}{{ cuisine.name }} Dishes{% endblock %}
 
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Save</button>
-    </form>
+{% block content %}
+<div class="container content-container">
+  <h2 class="text-center mb-4">{{ cuisine.name }} Dishes</h2>
+  <div class="row">
+      {% for dish in dishes %}
+      <div class="col-md-4 mb-4">
+          <div class="card shadow-lg border-0 rounded-lg h-100 dish-card">
+              <img src="{% static dish.name|dish_img %}" class="card-img-top" alt="{{ dish.name }}"
+                   onerror="this.src='{% static 'img/curved-images/main-menu.jpg' %}'">
+              <div class="card-body d-flex flex-column">
+                  <h5 class="card-title fw-bold">{{ dish.name }}</h5>
+                  <p class="card-text text-muted mb-1">{{ dish.description|truncatewords:16 }}</p>
+                  <div class="d-flex align-items-center gap-2 small text-secondary mb-3">
+                      {% if dish.dish_type %}<span class="badge bg-secondary">{{ dish.dish_type.name }}</span>{% endif %}
+                  </div>
+                  <div class="mt-auto d-flex justify-content-between align-items-center">
+                      <span class="fw-bold text-success">{{ dish.price }} ₴</span>
+                      <a href="{% url 'kitchen:dish_detail' dish.pk %}" class="btn btn-outline-primary btn-hover">View Details</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      {% empty %}
+          <p class="text-center">No dishes to display.</p>
+      {% endfor %}
+  </div>
 
-    <p><a href="{% url 'dish_list' %}">← Back to dish list</a></p>
+  <!-- Pagination -->
+  {% if dishes.has_other_pages %}
+  <nav aria-label="Dishes pagination" class="mt-2">
+      <ul class="pagination justify-content-center">
+          {% if dishes.has_previous %}
+              <li class="page-item"><a class="page-link" href="?page={{ dishes.previous_page_number }}">Previous</a></li>
+          {% else %}
+              <li class="page-item disabled"><span class="page-link">Previous</span></li>
+          {% endif %}
 
-    <script>
-        $(document).ready(function() {
-            $('#id_ingredients').select2({
-                placeholder: "Select ingredients",
-                allowClear: true,
-                width: '100%'
-            });
-        });
-    </script>
-</body>
-</html>
+          {% for num in dishes.paginator.page_range %}
+              {% if dishes.number == num %}
+                  <li class="page-item active"><span class="page-link">{{ num }}</span></li>
+              {% else %}
+                  <li class="page-item"><a class="page-link" href="?page={{ num }}">{{ num }}</a></li>
+              {% endif %}
+          {% endfor %}
+
+          {% if dishes.has_next %}
+              <li class="page-item"><a class="page-link" href="?page={{ dishes.next_page_number }}">Next</a></li>
+          {% else %}
+              <li class="page-item disabled"><span class="page-link">Next</span></li>
+          {% endif %}
+      </ul>
+  </nav>
+  {% endif %}
+</div>
+{% endblock %}

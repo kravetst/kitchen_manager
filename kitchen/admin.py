@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
-from .models import Cook, DishType, Dish, Ingredient
+from .models import Cook, DishType, Dish, Ingredient, Cuisine
 from .forms import CookCreationForm, CookChangeForm
 
 
@@ -53,3 +53,9 @@ class DishAdmin(admin.ModelAdmin):
         return ", ".join([ingredient.name for ingredient in obj.ingredients.all()])
 
     get_ingredients.short_description = "Ingredients"
+
+
+@admin.register(Cuisine)
+class CuisineAdmin(admin.ModelAdmin):
+    list_display = ("name",)
+    search_fields = ("name",)
