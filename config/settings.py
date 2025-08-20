@@ -19,7 +19,6 @@ env = environ.Env(
     DEBUG=(bool, False)
 )
 
-# читаємо .env
 environ.Env.read_env(BASE_DIR / ".env")
 
 # Secret key
@@ -94,7 +93,7 @@ AUTH_USER_MODEL = "kitchen.Cook"
 
 LANGUAGE_CODE = "en-us"
 
-TIME_ZONE = "UTC"
+TIME_ZONE = "Europe/Kiev"
 
 USE_I18N = True
 USE_TZ = True

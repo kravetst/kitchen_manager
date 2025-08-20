@@ -1,0 +1,445 @@
+[
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2025-08-20T05:54:28.364Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "2",
+        "object_repr": "Alice Green",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2025-08-20T05:55:15.855Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "3",
+        "object_repr": "Bob Brown",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2025-08-20T05:55:20.370Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "3",
+        "object_repr": "Bob Brown",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2025-08-20T05:57:02.677Z",
+        "user": 1,
+        "content_type": 6,
+        "object_id": "1",
+        "object_repr": "Italian",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2025-08-20T05:57:37.894Z",
+        "user": 1,
+        "content_type": 6,
+        "object_id": "2",
+        "object_repr": "Japanese",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2025-08-20T05:58:25.789Z",
+        "user": 1,
+        "content_type": 6,
+        "object_id": "3",
+        "object_repr": "Mexican",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2025-08-20T05:58:59.775Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "1",
+        "object_repr": "Starter",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2025-08-20T05:59:06.787Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "2",
+        "object_repr": "Main",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+        "action_time": "2025-08-20T05:59:16.305Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "3",
+        "object_repr": "Dessert",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+        "action_time": "2025-08-20T05:59:39.259Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "1",
+        "object_repr": "Tomato",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+        "action_time": "2025-08-20T05:59:49.883Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "2",
+        "object_repr": "Cheese",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+        "action_time": "2025-08-20T06:00:00.946Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "3",
+        "object_repr": "Chicken",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+        "action_time": "2025-08-20T06:00:06.435Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "4",
+        "object_repr": "Rice",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+        "action_time": "2025-08-20T06:00:20.630Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "5",
+        "object_repr": "Chocolate",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+        "action_time": "2025-08-20T06:03:31.155Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "1",
+        "object_repr": "Pizza",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+        "action_time": "2025-08-20T06:04:32.114Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "2",
+        "object_repr": "Sushi",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+        "action_time": "2025-08-20T06:06:06.180Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "3",
+        "object_repr": "Tacos",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+        "action_time": "2025-08-20T07:59:58.736Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "2",
+        "object_repr": "Sushi",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Cooks\"]}}]"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "kx22pir0xlvy8vqssedyad7ce17pgyi2",
+    "fields": {
+        "session_data": ".eJxVjDsOwjAQBe_iGllrxz8o6TmDtV5vcADZUpxUiLuTSCmgfTPz3iLiupS4dp7jlMVFKHH63RLSk-sO8gPrvUlqdZmnJHdFHrTLW8v8uh7u30HBXrbaWcOOBotq1MGpbG0CoxIxkGbStDEI3nD23rrBmGABHPoM49kZTCA-X8-PNzM:1uoQji:FwI1dYzzR_vTXVnZ919jy9ZU2WUrgqaA7K3qmlfNo9s",
+        "expire_date": "2025-09-02T18:07:06.918Z"
+    }
+},
+{
+    "model": "kitchen.cuisine",
+    "pk": 1,
+    "fields": {
+        "name": "Italian",
+        "image_url": "https://trend-rest.com/wp-content/uploads/2019/03/%D0%9E%D1%81%D0%BE%D0%B1%D0%BB%D0%B8%D0%B2%D0%BE%D1%81%D1%82%D1%96-%D1%96%D1%82%D0%B0%D0%BB%D1%96%D0%B9%D1%81%D1%8C%D0%BA%D0%BE%D1%97-%D0%BA%D1%83%D1%85%D0%BD%D1%96-1170x500.jpg"
+    }
+},
+{
+    "model": "kitchen.cuisine",
+    "pk": 2,
+    "fields": {
+        "name": "Japanese",
+        "image_url": "https://fugu.ck.ua/wp-content/uploads/2020/07/japanese-food.jpg"
+    }
+},
+{
+    "model": "kitchen.cuisine",
+    "pk": 3,
+    "fields": {
+        "name": "Mexican",
+        "image_url": "https://piligrim.ua/wp-content/uploads/2021/10/Mexican_food_main.jpg"
+    }
+},
+{
+    "model": "kitchen.dishtype",
+    "pk": 1,
+    "fields": {
+        "name": "Starter"
+    }
+},
+{
+    "model": "kitchen.dishtype",
+    "pk": 2,
+    "fields": {
+        "name": "Main"
+    }
+},
+{
+    "model": "kitchen.dishtype",
+    "pk": 3,
+    "fields": {
+        "name": "Dessert"
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 1,
+    "fields": {
+        "name": "Tomato",
+        "description": ""
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 2,
+    "fields": {
+        "name": "Cheese",
+        "description": ""
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 3,
+    "fields": {
+        "name": "Chicken",
+        "description": ""
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 4,
+    "fields": {
+        "name": "Rice",
+        "description": ""
+    }
+},
+{
+    "model": "kitchen.ingredient",
+    "pk": 5,
+    "fields": {
+        "name": "Chocolate",
+        "description": ""
+    }
+},
+{
+    "model": "kitchen.dish",
+    "pk": 1,
+    "fields": {
+        "name": "Pizza",
+        "description": "Pizza",
+        "price": "13.00",
+        "dish_type": 2,
+        "cuisine": 1,
+        "image_url": "https://omnomnom.dp.ua/image/cache/catalog/pizza_new/new4/pepperoni-500x500.jpg",
+        "cooks": [
+            2
+        ],
+        "ingredients": [
+            2
+        ]
+    }
+},
+{
+    "model": "kitchen.dish",
+    "pk": 2,
+    "fields": {
+        "name": "Sushi",
+        "description": "Sushi",
+        "price": "10.00",
+        "dish_type": 2,
+        "cuisine": 2,
+        "image_url": "https://vilki-palki.od.ua/storage/img/52/2b/%D0%9A%D0%B0%D0%BB%D0%B8%D1%84%D0%BE%D1%80%D0%BD%D0%B8%D1%8F%D1%81%D1%83%D0%B3%D1%80%D0%B5%D0%BC.jpg",
+        "cooks": [
+            2
+        ],
+        "ingredients": [
+            2,
+            3
+        ]
+    }
+},
+{
+    "model": "kitchen.dish",
+    "pk": 3,
+    "fields": {
+        "name": "Tacos",
+        "description": "Tacos",
+        "price": "15.00",
+        "dish_type": 2,
+        "cuisine": 3,
+        "image_url": "https://www.onceuponachef.com/images/2023/08/Beef-Tacos.jpg",
+        "cooks": [
+            3
+        ],
+        "ingredients": [
+            2,
+            3
+        ]
+    }
+},
+{
+    "model": "kitchen.cook",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$1000000$ygdV4vKYelItqE2QL8R46t$otXiDtqJe5+xNMBqwN3HkAhrGsOgPV5AL2D/vRJNvMQ=",
+        "last_login": "2025-08-19T18:07:06.885Z",
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-08-19T18:06:20.642Z",
+        "years_of_experience": "",
+        "image_url": "",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "kitchen.cook",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$1000000$6Xwn26RiqJOzaRTzgkVS9N$vNr8CfJzbxf6VqX6/cZS7cZ27VKbpVvGJIfbKGVqV3A=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "alice",
+        "first_name": "Alice",
+        "last_name": "Green",
+        "email": "alice@example.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-08-20T05:54:26.833Z",
+        "years_of_experience": "3",
+        "image_url": "",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "kitchen.cook",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$1000000$pDA1sEtY0dut07byrF7RpP$7l+TFUZ+V/42fuGC52AaUZAsRAHGa/XMPb6MlCgbzD4=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "bob",
+        "first_name": "Bob",
+        "last_name": "Brown",
+        "email": "bob@example.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-08-20T05:55:14.457Z",
+        "years_of_experience": "5",
+        "image_url": "",
+        "groups": [],
+        "user_permissions": []
+    }
+}
+]
